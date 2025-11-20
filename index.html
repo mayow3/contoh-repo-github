@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Website Terminal Kasintuwu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- EmailJS untuk mengirim form ke email -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      // Inisialisasi EmailJS dengan Public Key Anda
+      (function () {
+        emailjs.init("N_1Ob00ZuQhyWMLOV"); // Public Key Anda
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- HEADER/HOME SECTION (Tampilan Awal) -->
+    <section class="header" id="home">
+      <nav>
+        <div class="logo-container">
+          <a href="#home" class="logo">
+            <img
+              src="gambar/logo kemenhub.png"
+              alt="logo kemenhub"
+              class="logo-kemenhub"
+            />
+            <img
+              src="gambar/logo dirjen.png"
+              alt="Logo Dirjen"
+              class="logo-dirjen"
+            />
+            <img
+              src="gambar/logo kasintuwu.png"
+              alt="Logo Kasintuwu dan bptd"
+              class="logo-kasintuwu dan bptd"
+            />
+            <img
+              src="gambar/bptd kelas ii sulawesi tengah.png"
+              alt="Logo Kasintuwu dan bptd"
+              class="logo-kasintuwu dan bptd"
+            />
+          </a>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" id="closeMenu"></i>
+          <ul>
+            <li><a href="#home">BERANDA</a></li>
+            <li><a href="#tentang">TENTANG KAMI</a></li>
+            <li><a href="#fasilitas">FASILITAS</a></li>
+            <li><a href="#rute">RUTE BUS</a></li>
+            <li><a href="#data">DATA PRODUKSI</a></li>
+            <li><a href="#kontak">KONTAK KAMI</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" id="showMenu"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>TERMINAL KASINTUWU</h1>
+        <p>
+          Terminal dengan Pelayanan Terbaik untuk Kenyamanan Perjalanan Anda
+        </p>
+        <a href="#tentang" class="hero-btn">JELAJAHI TERMINAL KAMI</a>
+      </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang" class="content-section">
+      <div class="container">
+        <h2>TENTANG KAMI</h2>
+
+        <!-- VIDEO PROFIL TERMINAL - FIXED -->
+        <div class="video-section">
+          <div class="video-container">
+            <div class="video-header">
+              <h3>
+                <i class="fas fa-play-circle"></i> Video Profil Terminal
+                Kasintuwu
+              </h3>
+              <p>Lihat langsung aktivitas dan fasilitas terminal kami</p>
+              <p>
+                Jika video eror bisa
+                <a href="https://youtu.be/aOEBIZRUZJE" target="_blank"
+                  >Klik di sini untuk menonton di YouTube</a
+                >
+              </p>
+            </div>
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/aOEBIZRUZJE"
+                title="Video Profil Terminal Kasintuwu"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Terminal Kasintuwu</h3>
+            <p><strong>Tipe A</strong> - Terminal Terbesar di Poso</p>
+            <p><strong>Tahun Berdiri:</strong> -</p>
+
+            <div class="visi-misi">
+              <h4>Visi</h4>
+              <p>
+                Menjadi terminal modern yang memberikan pelayanan terbaik bagi
+                masyarakat dengan standar nasional.
+              </p>
+
+              <h4>Misi</h4>
+              <ul>
+                <li>Menyediakan fasilitas terminal yang nyaman dan aman</li>
+                <li>Memberikan pelayanan prima kepada pengguna jasa</li>
+                <li>Mengoptimalkan operasional terminal secara efisien</li>
+                <li>Menjalin kerjasama yang baik dengan semua pihak terkait</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="korsatpel-profile">
+            <div class="foto-pimpinan">
+              <div class="foto-container">
+                <img
+                  src="gambar/foto pak said.jpg"
+                  alt="Abdul Said, S.Sos., M.M - Korsatpel Terminal Kasintuwu"
+                  class="foto-korsatpel"
+                  loading="lazy"
+                />
+                <div class="foto-placeholder">
+                  <i class="fas fa-user-tie"></i>
+                  <p>Foto Korsatpel</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-pimpinan">
+              <h4>Abdul Said, S.Sos., M.M</h4>
+
+              <hr class="info-separator" />
+
+              <div class="info-item">
+                <p>
+                  <strong>Jabatan:</strong> Kepala Satuan Pelayanan (Korsatpel)
+                </p>
+              </div>
+
+              <div class="info-item">
+                <p>
+                  <strong>Masa Kerja:</strong> 19 tahun di bidang transportasi
+                </p>
+              </div>
+
+              <blockquote>
+                "Melayani dengan hati untuk kenyamanan perjalanan Anda"
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASILITAS -->
+    <!-- FASILITAS -->
+    <section id="fasilitas" class="content-section bg-light">
+      <div class="container">
+        <h2>FASILITAS</h2>
+        <div class="facilities-grid">
+          <div class="facility-item">
+            <i class="fas fa-restroom"></i>
+            <h4>Toilet</h4>
+            <p>Fasilitas toilet yang terjaga kebersihannya</p>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-mosque"></i>
+            <h4>Mushola</h4>
+            <p>Tempat ibadah yang nyaman untuk umat muslim</p>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-parking"></i>
+            <h4>Area Parkir Luas</h4>
+            <p>Area parkir yang mampu menampung kendaraan dalam jumlah besar</p>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-utensils"></i>
+            <h4>Kantin & Warung Makan</h4>
+            <p>Berbagai pilihan makanan dan minuman</p>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Pos Keamanan 24 Jam</h4>
+            <p>Pengamanan terminal selama 24 jam non-stop</p>
+          </div>
+          <!-- FASILITAS BARU -->
+          <div class="facility-item">
+            <i class="fas fa-info-circle"></i>
+            <h4>Pusat Informasi</h4>
+            <p>Layanan informasi lengkap untuk penumpang</p>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-wifi"></i>
+            <h4>Wifi Gratis</h4>
+            <p>Akses internet gratis di seluruh area terminal</p>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-couch"></i>
+            <h4>Ruang Tunggu</h4>
+            <p>Area tunggu yang nyaman dengan kursi ergonomis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUTE BUS - SISTEM SLIDESHOW 3D -->
+    <section id="rute" class="content-section">
+      <div class="container">
+        <h2>RUTE BUS</h2>
+
+        <!-- PETA UTAMA DENGAN SLIDESHOW 3D -->
+        <div class="map-slideshow-container">
+          <!-- Navigation Tabs -->
+          <div class="map-tabs">
+            <button class="map-tab active" data-map="akap">
+              <i class="fas fa-bus"></i> AKAP
+            </button>
+            <button class="map-tab" data-map="akdp">
+              <i class="fas fa-bus"></i> AKDP
+            </button>
+            <button class="map-tab" data-map="ajdp">
+              <i class="fas fa-shuttle-van"></i> AJDP
+            </button>
+            <button class="map-tab" data-map="perintis">
+              <i class="fas fa-mountain"></i> PERINTIS
+            </button>
+          </div>
+
+          <!-- Map Slideshow -->
+          <div class="map-slideshow">
+            <!-- Peta AKAP -->
+            <div class="map-slide active" id="akapMapSlide">
+              <div class="map-header">
+                <h3><i class="fas fa-bus"></i> Rute AKAP</h3>
+                <p>Antar Kota Antar Provinsi</p>
+              </div>
+              <div class="map-container">
+                <div id="akapMap" class="leaflet-map"></div>
+              </div>
+              <div class="map-info">
+                <h4>Terminal Tujuan AKAP:</h4>
+                <div class="terminal-list">
+                  <span class="terminal-tag">TERMINAL DAYA</span>
+                  <span class="terminal-tag">TERMINAL MAROS</span>
+                  <span class="terminal-tag">TERMINAL SINJAI</span>
+                  <span class="terminal-tag">TERMINAL SIMBUANG</span>
+                  <span class="terminal-tag">TERMINAL KASINTUWU</span>
+                  <span class="terminal-tag">SOPENG</span>
+                  <span class="terminal-tag">KASIMBAR</span>
+                  <span class="terminal-tag">BUNGKU</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Peta AKDP -->
+            <div class="map-slide" id="akdpMapSlide">
+              <div class="map-header">
+                <h3><i class="fas fa-bus"></i> Rute AKDP</h3>
+                <p>Antar Kota Dalam Provinsi</p>
+              </div>
+              <div class="map-container">
+                <div id="akdpMap" class="leaflet-map"></div>
+              </div>
+              <div class="map-info">
+                <h4>Terminal Tujuan AKDP:</h4>
+                <div class="terminal-list">
+                  <span class="terminal-tag">PALU</span>
+                  <span class="terminal-tag">BUNGKU</span>
+                  <span class="terminal-tag">AMPANA</span>
+                  <span class="terminal-tag">TERMINAL KASINTUWU</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Peta AJDP -->
+            <div class="map-slide" id="ajdpMapSlide">
+              <div class="map-header">
+                <h3><i class="fas fa-shuttle-van"></i> Rute AJDP</h3>
+                <p>Antar Jemput Dalam Provinsi</p>
+              </div>
+              <div class="map-container">
+                <div id="ajdpMap" class="leaflet-map"></div>
+              </div>
+              <div class="map-info">
+                <h4>Terminal Tujuan AJDP:</h4>
+                <div class="terminal-list">
+                  <span class="terminal-tag">TENTENA</span>
+                  <span class="terminal-tag">PALU</span>
+                  <span class="terminal-tag">TERMINAL KASINTUWU</span>
+                  <span class="terminal-tag">LUWUK</span>
+                  <span class="terminal-tag">AMPANA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Peta Perintis -->
+            <div class="map-slide" id="perintisMapSlide">
+              <div class="map-header">
+                <h3><i class="fas fa-mountain"></i> Rute Perintis</h3>
+                <p>Layanan Perintis ke Daerah</p>
+              </div>
+              <div class="map-container">
+                <div id="perintisMap" class="leaflet-map"></div>
+              </div>
+              <div class="map-info">
+                <h4>Rute Perintis:</h4>
+                <div class="terminal-list">
+                  <span class="terminal-tag">BADA</span>
+                  <span class="terminal-tag">PENDOLO</span>
+                  <span class="terminal-tag">NAPU</span>
+                  <span class="terminal-tag">TERMINAL KASINTUWU</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button class="map-nav map-prev" onclick="prevMapSlide()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="map-nav map-next" onclick="nextMapSlide()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <!-- Dots Indicator -->
+          <div class="map-dots">
+            <button class="map-dot active" data-slide="0"></button>
+            <button class="map-dot" data-slide="1"></button>
+            <button class="map-dot" data-slide="2"></button>
+            <button class="map-dot" data-slide="3"></button>
+          </div>
+        </div>
+
+        <!-- JADWAL BUS DENGAN SLIDER 3D -->
+        <div class="schedule-section">
+          <h3 class="schedule-title">Jadwal Keberangkatan Bus</h3>
+          <p class="schedule-subtitle">
+            Pilih kategori dan geser untuk melihat jadwal lengkap
+          </p>
+
+          <!-- Kategori Tabs untuk Jadwal -->
+          <div class="schedule-tabs">
+            <button class="schedule-tab active" data-category="akap">
+              BUS AKAP
+            </button>
+            <button class="schedule-tab" data-category="akdp">BUS AKDP</button>
+            <button class="schedule-tab" data-category="ajdp">BUS AJDP</button>
+            <button class="schedule-tab" data-category="perintis">
+              BUS PERINTIS
+            </button>
+          </div>
+
+          <!-- Container untuk Slider Jadwal -->
+          <div class="schedule-slider-container">
+            <!-- Slider akan diisi oleh JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA PRODUKSI -->
+    <section id="data" class="content-section bg-light">
+      <div class="container">
+        <h2>DATA PRODUKSI</h2>
+
+        <div class="data-info">
+          <p class="update-info">
+            <strong>Update Terakhir:</strong>
+            <span id="lastUpdate">25 Desember 2024, 08:00 WITA</span>
+          </p>
+          <p class="data-source">Data dari Excel terupdate</p>
+        </div>
+
+        <!-- Tab Navigation - DITAMBAHKAN TAB AJDP & PERINTIS -->
+        <div class="data-tabs">
+          <button class="tab-button active" data-tab="summary">
+            Ringkasan
+          </button>
+          <button class="tab-button" data-tab="akap">Data AKAP</button>
+          <button class="tab-button" data-tab="akdp">Data AKDP</button>
+          <button class="tab-button" data-tab="ajdp">Data AJDP</button>
+          <button class="tab-button" data-tab="perintis">Data Perintis</button>
+        </div>
+
+        <!-- Summary Tab -->
+        <div id="summary" class="tab-content active">
+          <div class="total-summary">
+            <div class="summary-item">
+              <h4>Total Bus AKAP</h4>
+              <span class="summary-value" id="totalBusAKAP">0</span>
+            </div>
+            <div class="summary-item">
+              <h4>Total Penumpang AKAP</h4>
+              <span class="summary-value" id="totalPenumpangAKAP">0</span>
+            </div>
+            <div class="summary-item">
+              <h4>Total Bus AKDP</h4>
+              <span class="summary-value" id="totalBusAKDP">0</span>
+            </div>
+            <div class="summary-item">
+              <h4>Total Penumpang AKDP</h4>
+              <span class="summary-value" id="totalPenumpangAKDP">0</span>
+            </div>
+            <div class="summary-item">
+              <h4>Total Bus AJDP</h4>
+              <span class="summary-value" id="totalBusAJDP">0</span>
+            </div>
+            <div class="summary-item">
+              <h4>Total Penumpang AJDP</h4>
+              <span class="summary-value" id="totalPenumpangAJDP">0</span>
+            </div>
+            <div class="summary-item">
+              <h4>Total Bus Perintis</h4>
+              <span class="summary-value" id="totalBusPerintis">0</span>
+            </div>
+            <div class="summary-item">
+              <h4>Total Penumpang Perintis</h4>
+              <span class="summary-value" id="totalPenumpangPerintis">0</span>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <h4>Grafik Produksi Bulanan</h4>
+            <div class="chart-placeholder">
+              <canvas id="productionChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- AKAP Tab -->
+        <div id="akap" class="tab-content">
+          <h3>Data Produksi AKAP (Antar Kota Antar Provinsi)</h3>
+          <div class="table-container">
+            <table class="production-table">
+              <thead>
+                <tr>
+                  <th>Bulan</th>
+                  <th>Kedatangan - Kendaraan</th>
+                  <th>Kedatangan - Penumpang</th>
+                  <th>Keberangkatan - Kendaraan</th>
+                  <th>Keberangkatan - Penumpang</th>
+                </tr>
+              </thead>
+              <tbody id="akapTableBody">
+                <!-- Data akan diisi oleh JavaScript -->
+              </tbody>
+              <tfoot>
+                <tr class="total-row">
+                  <td><strong>TOTAL</strong></td>
+                  <td id="akapTotalKendaraanKedatangan">0</td>
+                  <td id="akapTotalPenumpangKedatangan">0</td>
+                  <td id="akapTotalKendaraanKeberangkatan">0</td>
+                  <td id="akapTotalPenumpangKeberangkatan">0</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- AKDP Tab -->
+        <div id="akdp" class="tab-content">
+          <h3>Data Produksi AKDP (Antar Kota Dalam Provinsi)</h3>
+          <div class="table-container">
+            <table class="production-table">
+              <thead>
+                <tr>
+                  <th>Bulan</th>
+                  <th>Kedatangan - Kendaraan</th>
+                  <th>Kedatangan - Penumpang</th>
+                  <th>Keberangkatan - Kendaraan</th>
+                  <th>Keberangkatan - Penumpang</th>
+                </tr>
+              </thead>
+              <tbody id="akdpTableBody">
+                <!-- Data akan diisi oleh JavaScript -->
+              </tbody>
+              <tfoot>
+                <tr class="total-row">
+                  <td><strong>TOTAL</strong></td>
+                  <td id="akdpTotalKendaraanKedatangan">0</td>
+                  <td id="akdpTotalPenumpangKedatangan">0</td>
+                  <td id="akdpTotalKendaraanKeberangkatan">0</td>
+                  <td id="akdpTotalPenumpangKeberangkatan">0</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- AJDP Tab - TAB BARU -->
+        <div id="ajdp" class="tab-content">
+          <h3>Data Produksi AJDP (Antar Jemput Dalam Provinsi)</h3>
+          <div class="table-container">
+            <table class="production-table">
+              <thead>
+                <tr>
+                  <th>Bulan</th>
+                  <th>Kedatangan - Kendaraan</th>
+                  <th>Kedatangan - Penumpang</th>
+                  <th>Keberangkatan - Kendaraan</th>
+                  <th>Keberangkatan - Penumpang</th>
+                </tr>
+              </thead>
+              <tbody id="ajdpTableBody">
+                <!-- Data akan diisi oleh JavaScript -->
+              </tbody>
+              <tfoot>
+                <tr class="total-row">
+                  <td><strong>TOTAL</strong></td>
+                  <td id="ajdpTotalKendaraanKedatangan">0</td>
+                  <td id="ajdpTotalPenumpangKedatangan">0</td>
+                  <td id="ajdpTotalKendaraanKeberangkatan">0</td>
+                  <td id="ajdpTotalPenumpangKeberangkatan">0</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- Perintis Tab - TAB BARU -->
+        <div id="perintis" class="tab-content">
+          <h3>Data Produksi Perintis (Layanan Perintis)</h3>
+          <div class="table-container">
+            <table class="production-table">
+              <thead>
+                <tr>
+                  <th>Bulan</th>
+                  <th>Kedatangan - Kendaraan</th>
+                  <th>Kedatangan - Penumpang</th>
+                  <th>Keberangkatan - Kendaraan</th>
+                  <th>Keberangkatan - Penumpang</th>
+                </tr>
+              </thead>
+              <tbody id="perintisTableBody">
+                <!-- Data akan diisi oleh JavaScript -->
+              </tbody>
+              <tfoot>
+                <tr class="total-row">
+                  <td><strong>TOTAL</strong></td>
+                  <td id="perintisTotalKendaraanKedatangan">0</td>
+                  <td id="perintisTotalPenumpangKedatangan">0</td>
+                  <td id="perintisTotalKendaraanKeberangkatan">0</td>
+                  <td id="perintisTotalPenumpangKeberangkatan">0</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK KAMI -->
+    <section id="kontak" class="content-section">
+      <div class="container">
+        <h2>KONTAK KAMI</h2>
+
+        <div class="contact-content">
+          <!-- Informasi Kontak -->
+          <div class="contact-info">
+            <div class="contact-header">
+              <h3>Hubungi Terminal Kasintuwu</h3>
+              <p>Kami siap melayani Anda 24 jam</p>
+            </div>
+
+            <div class="contact-grid">
+              <div class="contact-card">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Alamat Terminal</h4>
+                  <p>
+                    Jalan Trans Sulawesi No. 123<br />Kelurahan Kasintuwu,
+                    Kecamatan Poso Kota<br />Poso, Sulawesi Tengah 94616
+                  </p>
+                  <div class="coordinate-info">
+                    <small
+                      >Koordinat: -1.4140910278425702, 120.75277267260425</small
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <p class="contact-email">satpelttakasintuwu@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Jam Operasional</h4>
+                  <p class="operational-hours">🕒 24 Jam Setiap Hari</p>
+                  <div class="operational-details">
+                    <p><strong>Pelayanan Umum:</strong> Setiap Hari</p>
+                    <p><strong>Waktu Operasional Terminal:</strong> 24 Jam</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+              <button
+                class="action-btn direction-btn"
+                onclick="getDirections()"
+              >
+                <i class="fas fa-route"></i> Petunjuk Arah
+              </button>
+            </div>
+          </div>
+
+          <!-- Peta dan Form Feedback -->
+          <div class="map-form-container">
+            <!-- Peta Terminal -->
+            <div class="map-section">
+              <div class="map-container">
+                <div class="map-header">
+                  <h4>Lokasi Terminal Kasintuwu</h4>
+                  <p>Terminal Tipe A - Poso, Sulawesi Tengah</p>
+                </div>
+                <div class="map-wrapper">
+                  <div class="terminal-map" id="terminalMap">
+                    <!-- Peta akan diisi oleh JavaScript -->
+                  </div>
+                </div>
+                <div class="map-actions">
+                  <button class="map-btn" onclick="openInGoogleMaps()">
+                    <i class="fab fa-google"></i> Google Maps
+                  </button>
+                  <button class="map-btn" onclick="openInOpenStreetMap()">
+                    <i class="fas fa-map"></i> OpenStreetMap
+                  </button>
+                  <button class="map-btn" onclick="openInWaze()">
+                    <i class="fab fa-waze"></i> Waze
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Feedback - SIMETRIS DENGAN PETA -->
+            <div class="feedback-section-symmetric">
+              <div class="feedback-container">
+                <div class="feedback-header-symmetric">
+                  <h4>
+                    <i class="fas fa-comment-dots"></i> Kotak Saran & Kritik
+                  </h4>
+                  <p>Suara Anda membantu kami meningkatkan pelayanan</p>
+                </div>
+
+                <form class="feedback-form-symmetric" id="feedbackForm">
+                  <div class="form-group-symmetric">
+                    <label for="name">Nama Lengkap</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Masukkan nama lengkap Anda"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group-symmetric">
+                    <label for="contact">Kontak (Email/WhatsApp)</label>
+                    <input
+                      type="text"
+                      id="contact"
+                      name="contact"
+                      placeholder="email@contoh.com atau 08xxx"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group-symmetric">
+                    <label for="message">Saran dan Kritik Membangun</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      placeholder="Tuliskan saran, kritik, atau pengalaman Anda..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group-symmetric">
+                    <label>Rating Kepuasan Pelayanan</label>
+                    <div class="rating-stars-symmetric">
+                      <div class="star-container">
+                        <input
+                          type="radio"
+                          id="star5-sym"
+                          name="rating"
+                          value="5"
+                        />
+                        <label for="star5-sym" class="star-label-sym">
+                          <i class="fas fa-star"></i>
+                          <span>Sangat Puas</span>
+                        </label>
+                      </div>
+                      <div class="star-container">
+                        <input
+                          type="radio"
+                          id="star4-sym"
+                          name="rating"
+                          value="4"
+                        />
+                        <label for="star4-sym" class="star-label-sym">
+                          <i class="fas fa-star"></i>
+                          <span>Puas</span>
+                        </label>
+                      </div>
+                      <div class="star-container">
+                        <input
+                          type="radio"
+                          id="star3-sym"
+                          name="rating"
+                          value="3"
+                        />
+                        <label for="star3-sym" class="star-label-sym">
+                          <i class="fas fa-star"></i>
+                          <span>Cukup</span>
+                        </label>
+                      </div>
+                      <div class="star-container">
+                        <input
+                          type="radio"
+                          id="star2-sym"
+                          name="rating"
+                          value="2"
+                        />
+                        <label for="star2-sym" class="star-label-sym">
+                          <i class="fas fa-star"></i>
+                          <span>Kurang</span>
+                        </label>
+                      </div>
+                      <div class="star-container">
+                        <input
+                          type="radio"
+                          id="star1-sym"
+                          name="rating"
+                          value="1"
+                        />
+                        <label for="star1-sym" class="star-label-sym">
+                          <i class="fas fa-star"></i>
+                          <span>Sangat Kurang</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="submit-btn-symmetric">
+                    <i class="fas fa-paper-plane"></i> Kirim Feedback
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
